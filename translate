@@ -1,3 +1,6 @@
+#!/usr/bin/env ruby
+# Made by Eli Saado and contributors
+
 require 'net/http'
 require 'json'
 
