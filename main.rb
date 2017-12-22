@@ -9,7 +9,7 @@ def translate(source_lang: "auto", target_lang:, text:) # Returns translated tex
   JSON.parse(Net::HTTP.get(URI("https://translate.googleapis.com/translate_a/single?client=gtx&sl=#{source_lang}&tl=#{target_lang}&dt=t&q=#{text}")))[0][0][0]
 end
 
-def usage()
+def show_usage()
   puts 'Usage: translate [source language (use auto for auto)] [target language] [text]'
   puts
   puts 'Examples:'
@@ -19,3 +19,7 @@ def usage()
   puts 'Translation engine provided by Google'
 end
 
+if !blank?(ARGV[0]) && !blank?(ARGV[1]) && !blank?(ARGV[2])
+else
+  show_usage()
+end
