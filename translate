@@ -28,8 +28,6 @@ if !blank?(ARGV[0]) && !blank?(ARGV[1]) && !blank?(ARGV[2])
     puts "Unkown language(s)"
   else
     puts "Translation: #{translation[0][0]}"
-    puts 'By Eli Saado and contributors'
-    puts 'Translation engine provided by Google'
   end
 else
   show_usage()
